@@ -1,7 +1,7 @@
 class PostImage < ApplicationRecord
   
   belongs_to :user
-  attachment :image # ここを追加（_idは含めません）
+  attachment :image
   has_many :post_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
   
